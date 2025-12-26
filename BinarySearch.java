@@ -27,7 +27,7 @@ public class BinarySearch {
 }
 
 */
-
+/*
 import java.util.Arrays;
 
 public class BinarySearch {
@@ -60,5 +60,39 @@ public class BinarySearch {
 
         String key = "mango";
         System.out.println(binarySearch(arr, key));
+    }
+}
+*/
+
+import java.util.Arrays;
+
+class BinarySearch{
+    static int[] search(int[][] matrix ,int target){
+        int r=0;
+        int c=matrix.length-1;
+
+        while(r<matrix.length && c>=0){
+            if(matrix[r][c] == target){
+                return new int[]{r,c};
+            }
+            if(matrix[r][c]<target){
+                r++;
+            }
+            else{
+                c--;
+            }
+        }
+        return new int[]{-1,-1};
+    }
+
+    public static void main(String[] args){
+        int arr[][]= {
+            {1, 4, 7, 11},
+            {2, 5, 8, 12},
+            {3, 6, 9, 16}
+        };
+        //int target=3;
+        String ans = Arrays.toString(search(arr, 9));
+        System.out.println(ans);
     }
 }
