@@ -1,4 +1,4 @@
-/*class Solution {
+class Solution {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
         int n=nums.length;
         int count=0;
@@ -19,9 +19,10 @@
     }
 }
 
-*/
+
 
 //sliding window 
+/*
 class Solution {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
 
@@ -48,3 +49,4 @@ class Solution {
         return count;
     }
 }
+*/
