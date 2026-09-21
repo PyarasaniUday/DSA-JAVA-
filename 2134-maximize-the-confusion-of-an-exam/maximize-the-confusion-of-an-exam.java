@@ -1,3 +1,42 @@
+//bfm 
+/*
+class Solution {
+    public int maxConsecutiveAnswers(String answerKey, int k) {
+
+        int max = 0;
+
+        for (int i = 0; i < answerKey.length(); i++) {
+
+            int t = 0;
+            int f = 0;
+
+            for (int j = i; j < answerKey.length(); j++) {
+
+                if (answerKey.charAt(j) == 'T') {
+                    t++;
+                } else {
+                    f++;
+                }
+
+                // Make all T
+                if (f <= k) {
+                    int len = j - i + 1;
+                    max = Math.max(max, len);
+                }
+
+                // Make all F
+                if (t <= k) {
+                    int len = j - i + 1;
+                    max = Math.max(max, len);
+                }
+            }
+        }
+
+        return max;
+    }
+}
+*/
+//sliding win variable 
 class Solution {
 
     public int maxConsecutiveAnswers(String answerKey, int k) {
