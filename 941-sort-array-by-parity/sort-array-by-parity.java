@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
     public int[] sortArrayByParity(int[] nums) {
         ArrayList<Integer> list = new ArrayList<>();
 
@@ -18,6 +18,25 @@ class Solution {
             nums[i]=list.get(i);
         }
 
+        return nums;
+    }
+}
+*/
+//2 pointer 
+
+class Solution {
+    public int[] sortArrayByParity(int[] nums) {
+        int i=0;
+        int j=0;
+        while(i<nums.length) {
+            if (nums[i] % 2 == 0) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                j++;
+            }
+            i++;
+        }
         return nums;
     }
 }
